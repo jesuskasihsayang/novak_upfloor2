@@ -3,7 +3,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Download extends Model
+class Download_model extends Model
 {
 
 	protected $table 		= "download";

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Image;
-use App\Models\Proyek;
-use App\Models\Staff;
+use App\Models\Proyek_model;
+use App\Models\Staff_model;
 
 class Proyek extends Controller
 {

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
-use App\Models\Download;
+use App\Models\Download_model;
 
 class Download extends Controller
 {

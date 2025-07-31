@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Image;
-use App\Models\Property;
-use App\Models\Staff;
+use App\Models\Property_model;
+use App\Models\Staff_model;
 
 class Property extends Controller
 {

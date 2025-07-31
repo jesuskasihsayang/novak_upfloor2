@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Image;
-use App\Models\Galeri;
+use App\Models\Galeri_model;
 
 class Galeri extends Controller
 {

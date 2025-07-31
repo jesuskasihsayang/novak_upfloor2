@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
 use Image;
-use App\Models\Agenda;
+use App\Models\Agenda_model;
 
 class Agenda extends Controller
 {

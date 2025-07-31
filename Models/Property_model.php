@@ -3,7 +3,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Property extends Model
+class Property_model extends Model
 {
 
 	protected $table 		= "property_tb";

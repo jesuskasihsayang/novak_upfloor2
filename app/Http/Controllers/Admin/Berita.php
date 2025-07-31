@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
 use Image;
-use App\Models\Berita;
+use App\Models\Berita_model;
 
 class Berita extends Controller
 {

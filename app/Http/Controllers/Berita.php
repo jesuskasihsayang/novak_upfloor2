@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\Paginator;
-use App\Models\Berita;
+use App\Models\Berita_model;
 Paginator::useBootstrap();
 
 class Berita extends Controller

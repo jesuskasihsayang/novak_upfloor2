@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Pagination\Paginator;
-use App\Models\Video;
+use App\Models\Video_model;
 
 class Video extends Controller
 {

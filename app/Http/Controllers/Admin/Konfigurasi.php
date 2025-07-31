@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Image;
-use App\Models\Konfigurasi;
+use App\Models\Konfigurasi_model;
 
 class Konfigurasi extends Controller
 {

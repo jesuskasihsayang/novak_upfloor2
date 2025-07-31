@@ -3,7 +3,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Rekening extends Model
+class Rekening_model extends Model
 {
     public function listing()
     {

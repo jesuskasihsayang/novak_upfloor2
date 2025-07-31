@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Konfigurasi extends Model
+class Konfigurasi_model extends Model
 {
     // Main Setting
     public function listing()

@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class User extends Model
+class User_model extends Model
 {
     // kategori
     public function login($username,$password)

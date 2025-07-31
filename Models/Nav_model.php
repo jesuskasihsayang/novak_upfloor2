@@ -1,9 +1,10 @@
 <?php
+
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Nav extends Model
+class Nav_model extends Model
 {
 
    
@@ -77,3 +78,5 @@ class Nav extends Model
         return $query;
     }
 }
+
+?>

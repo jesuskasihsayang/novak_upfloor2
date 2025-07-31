@@ -4,12 +4,12 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use App\Models\Rekening;
-use App\Models\Berita;
-use App\Models\Staff;
-use App\Models\Download;
-use App\Models\Property;
-use App\Models\Proyek;
+use App\Models\Rekening_model;
+use App\Models\Berita_model;
+use App\Models\Staff_model;
+use App\Models\Download_model;
+use App\Models\Property_model;
+use App\Models\Proyek_model;
 use PDF;
 
 class Home extends Controller
@@ -22,8 +22,8 @@ class Home extends Controller
         $video          = DB::table('video')->orderBy('id_video','DESC')->first();
     	$slider         = DB::table('galeri')->where('jenis_galeri','Homepage')->limit(5)->orderBy('id_galeri', 'DESC')->get();
         $layanan        = DB::table('berita')->where(array('jenis_berita'=>'Layanan','status_berita'=>'Publish'))->limit(3)->orderBy('urutan', 'ASC')->get();
-        $news           = new Berita();
-        $myproperty     = new Property();
+        $news           = new Berita_model();
+        $myproperty     = new Property_model();
         $berita         = $news->home();
 
         $property = $myproperty->semua_raw();
@@ -49,8 +49,8 @@ class Home extends Controller
     {
     	$site_config   = DB::table('konfigurasi')->first();
         $kategori_property = DB::table('kategori_property')->orderBy('urutan','ASC')->get();
-        $news           = new Berita();
-        $myproperty     = new Property();
+        $news           = new Berita_model();
+        $myproperty     = new Property_model();
         $berita         = $news->home();
 
         //Filter
@@ -180,8 +180,8 @@ class Home extends Controller
     public function search_kontraktor($tipe, Request $request)
     {
     	$site_config  = DB::table('konfigurasi')->first();
-        $news         = new Berita();
-        $myproyek     = new Proyek();
+        $news         = new Berita_model();
+        $myproyek     = new Proyek_model();
         $berita       = $news->home();
         
         //Filter
@@ -262,12 +262,12 @@ class Home extends Controller
     {
         $site_config    = DB::table('konfigurasi')->first();
         
-        $myproperty     = new Property();
+        $myproperty     = new Property_model();
         $property       = $myproperty->detail($id_property);
         $images         = DB::table('property_img')->where('id_property',$property->id_property)->orderBy('index_img')->get();
-        $mystaff        = new Staff();
+        $mystaff        = new Staff_model();
         $staff          = $mystaff->detail($property->id_staff);
-        $news           = new Berita();
+        $news           = new Berita_model();
         $berita         = $news->home();
 
         $gambar = [];
@@ -299,10 +299,10 @@ class Home extends Controller
     {
         $site_config    = DB::table('konfigurasi')->first();
         
-        $myproyek       = new Proyek();
+        $myproyek       = new Proyek_model();
         $proyek         = $myproyek->detail($id_proyek);
         $images         = DB::table('proyek_img')->where('id_proyek',$proyek->id_proyek)->orderBy('index_img')->get();
-        $news           = new Berita();
+        $news           = new Berita_model();
         $berita         = $news->home();
 
         $gambar = [];
@@ -328,10 +328,10 @@ class Home extends Controller
     {
         $site_config    = DB::table('konfigurasi')->first();
         
-        $mystaff        = new Staff();
+        $mystaff        = new Staff_model();
         $staff          = $mystaff->detail($id_staff);
-        $myproperty     = new Property();
-        $news           = new Berita();
+        $myproperty     = new Property_model();
+        $news           = new Berita_model();
         $berita         = $news->home();
         $limit          = ($request->limit) ? $request->limit : '9';
         $order          = ($request->order) ? $request->order : 'newest';
@@ -383,7 +383,7 @@ class Home extends Controller
     public function about()
     {
         $site_config   = DB::table('konfigurasi')->first();
-        $news   = new Berita();
+        $news   = new Berita_model();
         $berita = $news->home();
         // Staff
         $kategori_staff  = DB::table('kategori_staff')->orderBy('urutan','ASC')->get();
@@ -404,7 +404,7 @@ class Home extends Controller
     public function about_project()
     {
         $site_config   = DB::table('konfigurasi')->first();
-        $news   = new Berita();
+        $news   = new Berita_model();
         $berita = $news->home();
         // Staff
         $kategori_staff  = DB::table('kategori_staff')->orderBy('urutan','ASC')->get();
